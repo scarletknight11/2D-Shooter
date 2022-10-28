@@ -189,3 +189,4 @@ MonoBehaviour:
   dealDamageOnTriggerEnter: 1
   dealDamageOnTriggerStay: 0
   dealDamageOnCollision: 0
+  life1: {fileID: 4109499324308427015, guid: e10c167ca927205468e4828f3c6a1b63, type: 3}

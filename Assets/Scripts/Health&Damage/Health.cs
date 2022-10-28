@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// This class handles the health state of a game object.
@@ -34,6 +35,14 @@ public class Health : MonoBehaviour
     [Tooltip("The maximum number of lives this health can have")]
     public int maximumLives = 5;
 
+    //public Text num;
+
+    //lives 
+    public GameObject life1;
+    public GameObject life2;
+    public GameObject life3;
+
+
     /// <summary>
     /// Description:
     /// Standard unity funciton called before the first frame update
@@ -45,6 +54,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         SetRespawnPoint(transform.position);
+        //num.text = "3";
     }
 
     /// <summary>
@@ -222,6 +232,19 @@ public class Health : MonoBehaviour
     void HandleDeathWithLives()
     {
         currentLives -= 1;
+        //num.text = currentLives.ToString();
+        if(currentLives == 2 && gameObject.tag == "Player")
+        {
+            life1.SetActive(false);
+        }
+        if (currentLives == 1 && gameObject.tag == "Player")
+        {
+            life2.SetActive(false);
+        }
+        if (currentLives == 0 && gameObject.tag == "Player")
+        {
+            life3.SetActive(false);
+        }
         if (currentLives > 0)
         {
             Respawn();

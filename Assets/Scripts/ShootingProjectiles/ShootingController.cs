@@ -36,6 +36,7 @@ public class ShootingController : MonoBehaviour
     //The input manager which manages player input
     private InputManager inputManager = null;
 
+
     /// <summary>
     /// Description:
     /// Standard unity function that runs every frame

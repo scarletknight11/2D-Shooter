@@ -36,4 +36,6 @@ public class Projectile : MonoBehaviour
         // move the transform
         transform.position = transform.position + transform.up * projectileSpeed * Time.deltaTime;
     }
+
+    
 }

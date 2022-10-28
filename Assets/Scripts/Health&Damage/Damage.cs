@@ -25,6 +25,8 @@ public class Damage : MonoBehaviour
     [Tooltip("Whether or not to apply damage on non-trigger collider collisions")]
     public bool dealDamageOnCollision = false;
 
+    
+
     /// <summary>
     /// Description: 
     /// Standard Unity function called whenever a Collider2D enters any attached 2D trigger collider
@@ -36,6 +38,7 @@ public class Damage : MonoBehaviour
     /// <param name="collision">The Collider2D that set of the function call</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (dealDamageOnTriggerEnter)
         {
             DealDamage(collision.gameObject);
